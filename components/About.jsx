@@ -7,12 +7,14 @@ const About = () => {
         <div className='col-span-2'>
           <p className='uppercase text-xl tracking-widest text-[#5651e5]'>About</p>
           <h2 className='py-4'>Who I Am</h2>
-          <p className='py-2 text-gray-600'>// I am not your normal developer</p>
+          <p className='py-2 text-gray-600'></p>
           <p className='py-2 text-gray-600'>
-            I have spent the last 12 years in the fire service working as a
-            professional firefighter & paramedic. I have always had a knack for
-            technology and working with computers. In 2019 I started working
-            with HTML & CSS to make some minor edits on a small business website
+            I have always had a knack for
+            technology and working with computers. I loved taking apart my electronic
+            toys when i was a kid  
+            and i have always been curious about motors and wires and batteries and so on.
+            Back in high school, I started working
+            with HTML & CSS to make some minor edits on my uncle's business website
             that I was operating. What I thought was just a few small edits
             turned into a love for programming.
           </p>
@@ -20,8 +22,9 @@ const About = () => {
             Fascinated with how intricate programming can be I was quickly drawn
             to learn more. I started learning javascript and was even more
             enthused with making websites interactive. I then started
-            freelancing for e-commerce companies on the Shopify platform. I am
-            now spending my time building projects with React JS, Firebase, and
+            freelancing for e-commerce companies on the Wordpress and Shopify platform. I currently 
+            work as a full-stack developer and 
+            spend most of my time building projects with React JS, Next JS, Firebase, MongoDB and
             learning new technologies.
           </p>
           <p className='py-2 text-gray-600 underline cursor-pointer'>Check out some of my latest projects.</p>
