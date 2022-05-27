@@ -3,9 +3,26 @@ import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import {HiOutlineChevronDoubleUp} from 'react-icons/hi'
+import {HiOutlineChevronDoubleUp} from 'react-icons/hi';
+import { useContext, useRef, useState } from "react"
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+
+  const formRef = useRef()
+  const [done, setDone] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    emailjs.sendForm('service_jjia23g', 'template_8ytoy34', formRef.current, 'uHlnrlooyBC2Q_FV_')
+    .then((result) => {
+      console.log(result.text);
+      setDone(true);
+    }, (error) => {
+      console.log(error.text);
+  });
+}
+
   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
@@ -25,28 +42,42 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <h2 className='py-2'>Name here</h2>
-                <p>Front-End Developer</p>
+                <h2 className='py-2'>Jestin Kuriakose</h2>
+                <p>Full-Stack Developer</p>
                 <p className='py-4'>
                   I am available for freelance or full-time positions. Contact
                   me and let's talk.
+                </p>
+                <p className='py-4'>
+                  <b>Phone: </b>519-722-0063
+                </p>
+                <p className='py-4'>
+                <b>Email: </b>jestink@live.com
                 </p>
               </div>
               <div>
                 <p className='uppercase pt-8'>Connect With Me</p>
                 <div className='flex items-center justify-between py-4'>
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                    <FaLinkedinIn />
-                  </div>
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                    <FaGithub />
-                  </div>
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                    <AiOutlineMail />
-                  </div>
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                    <BsFillPersonLinesFill />
-                  </div>
+                  <a href='https://www.linkedin.com/in/jestin-kuriakose-47413483/' target="_blank">  
+                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                        <FaLinkedinIn />
+                    </div>
+                  </a>
+                  <a href='https://github.com/jestin-kuriakose' target="_blank">
+                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                        <FaGithub />
+                    </div>
+                  </a>
+                  <a href='mailto:jestink@live.com' target="_blank">
+                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                        <AiOutlineMail />
+                    </div>
+                  </a>
+                  <Link href='/#contact'>
+                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+                        <BsFillPersonLinesFill />
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -55,30 +86,24 @@ const Contact = () => {
           {/* right */}
           <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
             <div className='p-4'>
-              <form>
+              <form ref={formRef} onSubmit={handleSubmit}>
                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                   <div className='flex flex-col'>
                     <label className='uppercase text-sm py-2'>Name</label>
                     <input
                       className='border-2 rounded-lg p-3 flex border-gray-300'
                       type='text'
+                      name="user_name"
                     />
                   </div>
-                  <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>
-                      Phone Number
-                    </label>
-                    <input
-                      className='border-2 rounded-lg p-3 flex border-gray-300'
-                      type='text'
-                    />
-                  </div>
+                  
                 </div>
                 <div className='flex flex-col py-2'>
                   <label className='uppercase text-sm py-2'>Email</label>
                   <input
                     className='border-2 rounded-lg p-3 flex border-gray-300'
                     type='email'
+                    name="user_email"
                   />
                 </div>
                 <div className='flex flex-col py-2'>
@@ -86,13 +111,15 @@ const Contact = () => {
                   <input
                     className='border-2 rounded-lg p-3 flex border-gray-300'
                     type='text'
+                    name="user_subject"
                   />
                 </div>
                 <div className='flex flex-col py-2'>
                   <label className='uppercase text-sm py-2'>Message</label>
-                  <textarea className='border-2 rounded-lg p-3 border-gray-300' rows='10'></textarea>
+                  <textarea className='border-2 rounded-lg p-3 border-gray-300' rows='10' name="message"></textarea>
                 </div>
                 <button className='w-full p-4 text-gray-100 mt-4'>Send Message</button>
+                {done && <p>Your Message has been sent !</p>}
               </form>
             </div>
           </div>
