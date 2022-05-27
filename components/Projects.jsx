@@ -15,25 +15,25 @@ const Projects = () => {
         <div className='grid md:grid-cols-2 gap-8'>
           <ProjectItem
             title='Property Finder'
-            backgroundImg='/../public/assets/projects/kw.png'
+            backgroundImg='/assets/projects/kw.png'
             projectUrl='/property'
             tech='React | React Context | Firebase | Stripe'
           />
           <ProjectItem
             title='Weather App'
-            backgroundImg='/../public/assets/projects/weather.png'
+            backgroundImg='/assets/projects/weather.png'
             projectUrl='/crypto'
             tech='HTML | CSS | NodeJS | MapBox | Weatherstack'
           />
           <ProjectItem
             title='Tesla Electronics'
-            backgroundImg='/../public/assets/projects/tesla.png'
+            backgroundImg='/assets/projects/tesla.png'
             projectUrl='/netflix'
             tech='React JS | Redux | MongoDB | Styled components | Material UI'
           />
           <ProjectItem
             title='Tesla Electronics - Admin panel'
-            backgroundImg='/../public/assets/projects/tesla-admin.png'
+            backgroundImg='/assets/projects/tesla-admin.png'
             projectUrl='/twitch'
             tech='React JS | Redux | MongoDB | JWT | Styled components | Material UI'
           />
