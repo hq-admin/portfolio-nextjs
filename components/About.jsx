@@ -14,7 +14,7 @@ const About = () => {
             toys when i was a kid  
             and i have always been curious about motors and wires and batteries and so on.
             Back in high school, I started working
-            with HTML & CSS to make some minor edits on my uncle's business website
+            with HTML & CSS to make some minor edits on my uncle’s business website
             that I was operating. What I thought was just a few small edits
             turned into a love for programming.
           </p>
