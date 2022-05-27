@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import React from 'react';
-//import cryptoImg from '../public/assets/projects/crypto.jpg';
+//import kw from '../public/assets/projects/kw.png';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
 
-const crypto = () => {
+const kw = () => {
   return (
     <div className='w-full'>
       <div className='w-screen h-[30vh] lg:h-[40vh] relative'>
@@ -13,12 +13,12 @@ const crypto = () => {
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
-          src='/../public/assets/projects/crypto.jpg'
+          src='/assets/projects/kw.png'
           alt='/'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2'>Weather App</h2>
-          <h3>HTML / CSS / NodeJS / MapBox / Weatherstack</h3>
+          <h2 className='py-2'>K-W Electronics</h2>
+          <h3>React JS / React Context / Firebase / Stripe</h3>
         </div>
       </div>
 
@@ -27,44 +27,44 @@ const crypto = () => {
           <p>Project</p>
           <h2>Overview</h2>
           <p>
-          A weather application using Node.js where you can enter an address/city and 
-          get the live weather report. This application fetches data by interacting with 
-          the MapBox and Weatherstack APIs.
+            This app was built using React JS and is hosted on Firebase. Users
+            are able to shop for different certified pre-owned cellphones and pay
+             using stripe. User
+            authentication is available so you can signup & signin to your
+            account with an email address. This is made possible with Firebase Authentication.
           </p>
-          <a href='https://jestin-weather-application.herokuapp.com/' target='_blank' rel="noreferrer"><button className='px-8 py-2 mt-4 mr-8'>Demo</button></a>
-          <a href='https://github.com/jestin-kuriakose/node-weather-website' target='_blank' rel="noreferrer"><button className='px-8 py-2 mt-4'>Code</button></a>
+          <a href='https://react-http-3e279.firebaseapp.com/home' target='_blank' rel="noreferrer"><button className='px-8 py-2 mt-4 mr-8'>Demo</button></a>
+          <a href='https://github.com/jestin-kuriakose/kw-electronics-website' target='_blank' rel="noreferrer"><button className='px-8 py-2 mt-4'>Code</button></a>
         </div>
         <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
           <div className='p-2'>
             <p className='text-center font-bold pb-2'>Technologies</p>
             <div className='grid grid-cols-3 md:grid-cols-1'>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> HTML
+                <RiRadioButtonFill className='pr-1' /> React
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> CSS
+                <RiRadioButtonFill className='pr-1' /> React Context
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> Javascript
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> NodeJS
+                <RiRadioButtonFill className='pr-1' /> Firebase
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> MapBox
+                <RiRadioButtonFill className='pr-1' /> Stripe
               </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Weatherstack
-              </p>
+              
             </div>
           </div>
         </div>
         <Link href='/#projects'>
-          <p className='underline cursor-pointer'>Back</p>
+            <p className='underline cursor-pointer'>Back</p>
         </Link>
       </div>
     </div>
   );
 };
 
-export default crypto;
+export default kw;
