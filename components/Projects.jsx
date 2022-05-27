@@ -1,10 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import kw from '/assets/projects/kw.png';
-import weather from '/assets/projects/weather.png'
-import tesla from '/assets/projects/tesla.png'
-import teslaAdmin from '/assets/projects/tesla-admin.png'
+
 import ProjectItem from './ProjectItem';
 
 const Projects = () => {
@@ -18,25 +15,25 @@ const Projects = () => {
         <div className='grid md:grid-cols-2 gap-8'>
           <ProjectItem
             title='Property Finder'
-            backgroundImg={kw}
+            backgroundImg='/../public/assets/projects/kw.png'
             projectUrl='/property'
             tech='React | React Context | Firebase | Stripe'
           />
           <ProjectItem
             title='Weather App'
-            backgroundImg={weather}
+            backgroundImg='/../public/assets/projects/weather.png'
             projectUrl='/crypto'
             tech='HTML | CSS | NodeJS | MapBox | Weatherstack'
           />
           <ProjectItem
             title='Tesla Electronics'
-            backgroundImg={tesla}
+            backgroundImg='/../public/assets/projects/tesla.png'
             projectUrl='/netflix'
             tech='React JS | Redux | MongoDB | Styled components | Material UI'
           />
           <ProjectItem
             title='Tesla Electronics - Admin panel'
-            backgroundImg={teslaAdmin}
+            backgroundImg='/../public/assets/projects/tesla-admin.png'
             projectUrl='/twitch'
             tech='React JS | Redux | MongoDB | JWT | Styled components | Material UI'
           />
