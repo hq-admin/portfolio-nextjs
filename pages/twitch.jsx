@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import teslaAdmin from '../public/assets/projects/tesla-admin.png'
+import teslaAdmin from '/assets/projects/tesla-admin.png'
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
 

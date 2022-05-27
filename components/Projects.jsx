@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import kw from '../public/assets/projects/kw.png';
-import weather from '../public/assets/projects/weather.png'
-import tesla from '../public/assets/projects/tesla.png'
-import teslaAdmin from '../public/assets/projects/tesla-admin.png'
+import kw from '/assets/projects/kw.png';
+import weather from '/assets/projects/weather.png'
+import tesla from '/assets/projects/tesla.png'
+import teslaAdmin from '/assets/projects/tesla-admin.png'
 import ProjectItem from './ProjectItem';
 
 const Projects = () => {
