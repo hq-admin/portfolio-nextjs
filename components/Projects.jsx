@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import propertyImg from '../public/assets/projects/property.jpg';
-import cryptoImg from '../public/assets/projects/crypto.jpg'
-import netflixImg from '../public/assets/projects/netflix.jpg'
-import twitchImg from '../public/assets/projects/twitch.jpg'
+import kw from '../public/assets/projects/kw.png';
+import weather from '../public/assets/projects/weather.png'
+import tesla from '../public/assets/projects/tesla.png'
+import teslaAdmin from '../public/assets/projects/tesla-admin.png'
 import ProjectItem from './ProjectItem';
 
 const Projects = () => {
@@ -18,23 +18,27 @@ const Projects = () => {
         <div className='grid md:grid-cols-2 gap-8'>
           <ProjectItem
             title='Property Finder'
-            backgroundImg={propertyImg}
+            backgroundImg={kw}
             projectUrl='/property'
+            tech='React | React Context | Firebase | Stripe'
           />
           <ProjectItem
-            title='Crypto App'
-            backgroundImg={cryptoImg}
+            title='Weather App'
+            backgroundImg={weather}
             projectUrl='/crypto'
+            tech='HTML | CSS | NodeJS | MapBox | Weatherstack'
           />
           <ProjectItem
-            title='Netflix App'
-            backgroundImg={netflixImg}
+            title='Tesla Electronics'
+            backgroundImg={tesla}
             projectUrl='/netflix'
+            tech='React JS | Redux | MongoDB | Styled components | Material UI'
           />
           <ProjectItem
-            title='Twitch UI'
-            backgroundImg={twitchImg}
+            title='Tesla Electronics - Admin panel'
+            backgroundImg={teslaAdmin}
             projectUrl='/twitch'
+            tech='React JS | Redux | MongoDB | JWT | Styled components | Material UI'
           />
         </div>
       </div>

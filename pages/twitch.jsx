@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import twitchImg from '../public/assets/projects/twitch.jpg';
+import teslaAdmin from '../public/assets/projects/tesla-admin.png'
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
 
@@ -13,12 +13,12 @@ const twitch = () => {
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
-          src={twitchImg}
+          src={teslaAdmin}
           alt='/'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2'>Twitch UI</h2>
-          <h3>React JS / Tailwind / Firebase</h3>
+          <h2 className='py-2'>Tesla Electronics - Admin panel</h2>
+          <h3>React JS / Redux / MongoDB / JWT / Styled components / Material UI</h3>
         </div>
       </div>
 
@@ -27,12 +27,15 @@ const twitch = () => {
           <p>Project</p>
           <h2>Overview</h2>
           <p>
-          This app was built using React JS and is hosted on Firebase. Users are able to search properties based on an Address, City, or ZIP code to retrieve a list of active properties currently for sale. You will be able to view property information as well as the specific location of the property integrated with the Google Maps API. User authentication is available so you can signup & signin to your account with an email address in order to save your favorite properties. This is made possible with Zillow API.
+          This is the admin side of Tesla Electronics and was built using React JS and is hosted on Heroku. 
+          the admin can view products, users, orders and all the admin information here and has the ability
+          to create new users and products. This app uses MongoDB for the database storage and JWT for authentication.
 
 
           </p>
-          <button className='px-8 py-2 mt-4 mr-8'>Demo</button>
-          <button className='px-8 py-2 mt-4'>Code</button>
+          <a href='https://github.com/jestin-kuriakose/ecommerce-react-full' target='_blank'><button className='px-8 py-2 mt-4 mr-8'>Demo</button></a>
+          <a href='https://github.com/jestin-kuriakose/ecommerce-react-full' target='_blank'><button className='px-8 py-2 mt-4'>Code</button></a>
+       
         </div>
         <div className='col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4'>
           <div className='p-2'>
@@ -42,19 +45,19 @@ const twitch = () => {
                 <RiRadioButtonFill className='pr-1' /> React
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Tailwind
+                <RiRadioButtonFill className='pr-1' /> Redux
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Javascript
+                <RiRadioButtonFill className='pr-1' /> MongoDB
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Firebase
+                <RiRadioButtonFill className='pr-1' /> JWT
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Google API
+                <RiRadioButtonFill className='pr-1' /> Styled components
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Zillow API
+                <RiRadioButtonFill className='pr-1' /> Material UI
               </p>
             </div>
           </div>

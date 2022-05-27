@@ -3,9 +3,26 @@ import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import {HiOutlineChevronDoubleUp} from 'react-icons/hi'
+import {HiOutlineChevronDoubleUp} from 'react-icons/hi';
+import { useContext, useRef, useState } from "react"
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+
+  const formRef = useRef()
+  const [done, setDone] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    emailjs.sendForm('service_jjia23g', 'template_8ytoy34', formRef.current, 'uHlnrlooyBC2Q_FV_')
+    .then((result) => {
+      console.log(result.text);
+      setDone(true);
+    }, (error) => {
+      console.log(error.text);
+  });
+}
+
   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
@@ -69,30 +86,24 @@ const Contact = () => {
           {/* right */}
           <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
             <div className='p-4'>
-              <form>
+              <form ref={formRef} onSubmit={handleSubmit}>
                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                   <div className='flex flex-col'>
                     <label className='uppercase text-sm py-2'>Name</label>
                     <input
                       className='border-2 rounded-lg p-3 flex border-gray-300'
                       type='text'
+                      name="user_name"
                     />
                   </div>
-                  <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>
-                      Phone Number
-                    </label>
-                    <input
-                      className='border-2 rounded-lg p-3 flex border-gray-300'
-                      type='text'
-                    />
-                  </div>
+                  
                 </div>
                 <div className='flex flex-col py-2'>
                   <label className='uppercase text-sm py-2'>Email</label>
                   <input
                     className='border-2 rounded-lg p-3 flex border-gray-300'
                     type='email'
+                    name="user_email"
                   />
                 </div>
                 <div className='flex flex-col py-2'>
@@ -100,13 +111,15 @@ const Contact = () => {
                   <input
                     className='border-2 rounded-lg p-3 flex border-gray-300'
                     type='text'
+                    name="user_subject"
                   />
                 </div>
                 <div className='flex flex-col py-2'>
                   <label className='uppercase text-sm py-2'>Message</label>
-                  <textarea className='border-2 rounded-lg p-3 border-gray-300' rows='10'></textarea>
+                  <textarea className='border-2 rounded-lg p-3 border-gray-300' rows='10' name="message"></textarea>
                 </div>
                 <button className='w-full p-4 text-gray-100 mt-4'>Send Message</button>
+                {done && <p>Your Message has been sent !</p>}
               </form>
             </div>
           </div>
