@@ -46,7 +46,7 @@ const Contact = () => {
                 <p>Full-Stack Developer</p>
                 <p className='py-4'>
                   I am available for freelance or full-time positions. Contact
-                  me and let's talk.
+                  me and let’s talk.
                 </p>
                 <p className='py-4'>
                   <b>Phone: </b>519-722-0063
@@ -58,17 +58,17 @@ const Contact = () => {
               <div>
                 <p className='uppercase pt-8'>Connect With Me</p>
                 <div className='flex items-center justify-between py-4'>
-                  <a href='https://www.linkedin.com/in/jestin-kuriakose-47413483/' target="_blank">  
+                  <a href='https://www.linkedin.com/in/jestin-kuriakose-47413483/' target="_blank" rel="noreferrer">  
                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                         <FaLinkedinIn />
                     </div>
                   </a>
-                  <a href='https://github.com/jestin-kuriakose' target="_blank">
+                  <a href='https://github.com/jestin-kuriakose' target="_blank" rel="noreferrer">
                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                         <FaGithub />
                     </div>
                   </a>
-                  <a href='mailto:jestink@live.com' target="_blank">
+                  <a href='mailto:jestink@live.com' target="_blank" rel="noreferrer">
                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                         <AiOutlineMail />
                     </div>
