@@ -13,6 +13,18 @@ const Projects = () => {
         </p>
         <h2 className='py-4'>What I’ve Built</h2>
         <div className='grid md:grid-cols-2 gap-8'>
+        <ProjectItem
+            title='Cellphone Trade-in App '
+            backgroundImg='/assets/projects/tradein-front.png'
+            projectUrl='/tradeinFront'
+            tech='React | Bootstrap | Firebase'
+          />
+        <ProjectItem
+            title='Cellphone Trade-in App - Admin '
+            backgroundImg='/assets/projects/tradein-admin.png'
+            projectUrl='/tradeinAdmin'
+            tech='React | Bootstrap | Firebase'
+          />
           <ProjectItem
             title='K-W Electronics'
             backgroundImg='/assets/projects/kw.png'
