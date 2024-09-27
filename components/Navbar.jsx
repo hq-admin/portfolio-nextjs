@@ -15,10 +15,10 @@ const Navbar = () => {
 
   useEffect(() => {
     if (
-      router.asPath === '/property' ||
-      router.asPath === '/crypto' ||
-      router.asPath === '/netflix' ||
-      router.asPath === '/twitch'
+      router.asPath === '/kw' ||
+      router.asPath === '/tesla' ||
+      router.asPath === '/teslaAdmin' ||
+      router.asPath === '/weather'
     ) {
       setNavBg('transparent');
       setLinkColor('#ecf0f3');
@@ -55,7 +55,7 @@ const Navbar = () => {
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         <Link href='/'>
           <Image
-            src='/../public/assets/jestin.png'
+            src='/assets/jestin.png'
             alt='/'
             width='125'
             height='50'

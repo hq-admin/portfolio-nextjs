@@ -11,30 +11,42 @@ const Projects = () => {
         <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
           Projects
         </p>
-        <h2 className='py-4'>What I ve Built</h2>
+        <h2 className='py-4'>What I’ve Built</h2>
         <div className='grid md:grid-cols-2 gap-8'>
+        <ProjectItem
+            title='Cellphone Trade-in App '
+            backgroundImg='/assets/projects/tradein-front.png'
+            projectUrl='/tradeinFront'
+            tech='React | Bootstrap | Firebase'
+          />
+        <ProjectItem
+            title='Cellphone Trade-in App - Admin '
+            backgroundImg='/assets/projects/tradein-admin.png'
+            projectUrl='/tradeinAdmin'
+            tech='React | Bootstrap | Firebase'
+          />
           <ProjectItem
-            title='Property Finder'
-            backgroundImg='/../public/assets/projects/kw.png'
-            projectUrl='/property'
+            title='K-W Electronics'
+            backgroundImg='/assets/projects/kw.png'
+            projectUrl='/kw'
             tech='React | React Context | Firebase | Stripe'
           />
           <ProjectItem
             title='Weather App'
-            backgroundImg='/../public/assets/projects/weather.png'
-            projectUrl='/crypto'
+            backgroundImg='/assets/projects/weather.png'
+            projectUrl='/weather'
             tech='HTML | CSS | NodeJS | MapBox | Weatherstack'
           />
           <ProjectItem
             title='Tesla Electronics'
-            backgroundImg='/../public/assets/projects/tesla.png'
-            projectUrl='/netflix'
+            backgroundImg='/assets/projects/tesla.png'
+            projectUrl='/tesla'
             tech='React JS | Redux | MongoDB | Styled components | Material UI'
           />
           <ProjectItem
             title='Tesla Electronics - Admin panel'
-            backgroundImg='/../public/assets/projects/tesla-admin.png'
-            projectUrl='/twitch'
+            backgroundImg='/assets/projects/tesla-admin.png'
+            projectUrl='/teslaAdmin'
             tech='React JS | Redux | MongoDB | JWT | Styled components | Material UI'
           />
         </div>
